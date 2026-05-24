@@ -254,81 +254,61 @@
       }
 
       .support-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
+        display: block;
         margin-top: 34px;
       }
 
-      .support-item {
+      .support-banner {
         position: relative;
         overflow: hidden;
-        min-height: 280px;
+        min-height: 340px;
         border-radius: 10px;
         background: #1f2933;
         color: #ffffff;
       }
 
-      .support-media {
-        position: relative;
-        height: 100%;
-        min-height: inherit;
-        overflow: hidden;
-        background: #f3f4f6;
-      }
-
-      .support-media img {
+      .support-banner img {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      .support-item:nth-child(1) .support-media img {
-        object-position: left center;
-      }
-
-      .support-item:nth-child(2) .support-media img {
-        object-position: center center;
-      }
-
-      .support-item:nth-child(3) .support-media img {
-        object-position: right center;
-      }
-
-      .support-media::after {
+      .support-banner::after {
         content: "";
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(180deg, rgba(15, 23, 42, 0.18) 0%, rgba(15, 23, 42, 0.7) 100%),
+          radial-gradient(circle at center, rgba(15, 23, 42, 0.18) 0%, rgba(15, 23, 42, 0.42) 58%, rgba(15, 23, 42, 0.62) 100%),
+          linear-gradient(180deg, rgba(15, 23, 42, 0.12) 0%, rgba(15, 23, 42, 0.46) 100%),
           linear-gradient(90deg, rgba(15, 23, 42, 0.34), rgba(15, 23, 42, 0.08));
       }
 
-      .support-copy {
+      .support-banner-text {
         position: absolute;
-        inset: auto 18px 18px 18px;
+        inset: 0;
         z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .support-banner-title {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
       }
 
-      .support-item h3 {
-        max-width: 280px;
-        margin: 0 0 8px;
-        color: #ffffff;
-        font-size: clamp(22px, 2.8vw, 32px);
-        line-height: 1.18;
-        text-shadow: 0 2px 18px rgba(0, 0, 0, 0.34);
-      }
-
-      .support-item p {
-        max-width: 270px;
+      .support-banner-title h3 {
+        max-width: 300px;
         margin: 0;
-        color: rgba(255, 255, 255, 0.86);
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 1.6;
+        color: #ffffff;
+        font-size: clamp(28px, 3.2vw, 42px);
+        line-height: 1.12;
+        letter-spacing: 0.02em;
+        text-shadow: 0 3px 22px rgba(0, 0, 0, 0.48);
       }
 
       .hero-card {
@@ -672,9 +652,14 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .support-grid {
-          grid-template-columns: 1fr;
+        .support-banner {
+          min-height: 300px;
           margin-top: 24px;
+        }
+
+        .support-banner-title {
+          min-height: 300px;
+          padding: 14px;
         }
 
         .hero-inner {
@@ -782,8 +767,8 @@
           font-size: 16px;
         }
 
-        .support-item {
-          min-height: 230px;
+        .support-banner-title h3 {
+          font-size: clamp(18px, 5vw, 28px);
         }
       }
     </style>
@@ -827,33 +812,20 @@
               <a class="button button-light" href="#flow">制作の流れ</a>
             </div>
             <div class="support-grid" aria-label="カスタム制作サポート">
-              <article class="support-item">
-                <div class="support-media">
-                  <img src="public/assets/brand-visual-support.png" alt="法人向けユニフォームのブランドビジュアル">
-                </div>
-                <div class="support-copy">
+              <div class="support-banner">
+                <img src="public/assets/brand-visual-support.png" alt="法人向けユニフォームのブランドビジュアル">
+                <div class="support-banner-text">
+                  <div class="support-banner-title">
                   <h3>無料デザイン相談</h3>
-                  <p>ロゴや文字入れの印象を、企業らしく整えます。</p>
                 </div>
-              </article>
-              <article class="support-item">
-                <div class="support-media">
-                  <img src="public/assets/brand-visual-support.png" alt="専任担当による法人向けサポート">
+                  <div class="support-banner-title">
+                    <h3>一対一の専門サポート</h3>
+                  </div>
+                  <div class="support-banner-title">
+                    <h3>高品質ロゴ加工</h3>
+                  </div>
                 </div>
-                <div class="support-copy">
-                  <h3>一対一の専門サポート</h3>
-                  <p>用途・数量・納期まで、専任担当が丁寧に対応します。</p>
-                </div>
-              </article>
-              <article class="support-item">
-                <div class="support-media">
-                  <img src="public/assets/brand-visual-support.png" alt="刺繍やプリント加工の制作イメージ">
-                </div>
-                <div class="support-copy">
-                  <h3>多様な加工方法に対応</h3>
-                  <p>刺繍・プリントなど、ブランドに合う表現を選べます。</p>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
           <div class="hero-cards" id="heroCards"></div>

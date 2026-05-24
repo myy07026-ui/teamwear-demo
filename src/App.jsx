@@ -138,43 +138,47 @@ export default function App() {
                 制作の流れ
               </a>
             </div>
-            <div className="mt-7 grid gap-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[
                 {
-                  label: 'Design',
-                  image: '/assets/logo-embroidery.jpg',
-                  alt: 'ロゴデザインと刺繍イメージ',
+                  image: '/assets/brand-visual-support.png',
+                  alt: '法人向けユニフォームのブランドビジュアル',
+                  position: 'object-left',
                   title: '無料デザイン相談',
-                  text: 'ロゴや文字入れの配置を、法人用途に合わせて整えます。'
+                  text: 'ロゴや文字入れの印象を、企業らしく整えます。'
                 },
                 {
-                  label: 'Support',
-                  image: '/assets/gray-polo-team.jpg',
-                  alt: '法人ユニフォームの打ち合わせイメージ',
-                  title: '専任担当が一対一で対応',
-                  text: '用途・数量・納期を確認しながら、落ち着いた対応で進行します。'
+                  image: '/assets/brand-visual-support.png',
+                  alt: '専任担当による法人向けサポート',
+                  position: 'object-center',
+                  title: '一対一の専門サポート',
+                  text: '用途・数量・納期まで、専任担当が丁寧に対応します。'
                 },
                 {
-                  label: 'Process',
-                  image: '/assets/blue-fabric-detail.jpg',
-                  alt: '生地と加工方法のイメージ',
+                  image: '/assets/brand-visual-support.png',
+                  alt: '刺繍やプリント加工の制作イメージ',
+                  position: 'object-right',
                   title: '多様な加工方法に対応',
-                  text: '刺繍・プリントなど、企業ユニフォームの制作ニーズに対応します。'
+                  text: '刺繍・プリントなど、ブランドに合う表現を選べます。'
                 }
               ].map((item) => (
                 <article
                   key={item.title}
-                  className="grid overflow-hidden rounded-lg border border-line bg-white p-2 sm:grid-cols-[132px_1fr] sm:gap-3"
+                  className="relative min-h-60 overflow-hidden rounded-lg bg-ink text-white"
                 >
-                  <div className="relative min-h-32 overflow-hidden rounded-md bg-gray-100 sm:min-h-24">
-                    <img src={item.image} alt={item.alt} className="h-full w-full object-cover" />
-                    <span className="absolute bottom-2 left-2 rounded-md bg-white/90 px-2 py-1 text-[11px] font-black text-brand">
-                      {item.label}
-                    </span>
-                  </div>
-                  <div className="flex min-w-0 flex-col justify-center px-1 py-2 sm:py-0">
-                    <h3 className="m-0 text-sm font-bold leading-snug">{item.title}</h3>
-                    <p className="m-0 mt-1 text-xs leading-5 text-gray-500">{item.text}</p>
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className={`absolute inset-0 h-full w-full object-cover ${item.position}`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-slate-900/15 to-slate-900/75" />
+                  <div className="relative z-10 flex h-full min-h-60 flex-col justify-end p-5">
+                    <h3 className="m-0 max-w-64 text-2xl font-black leading-tight text-white">
+                      {item.title}
+                    </h3>
+                    <p className="m-0 mt-2 max-w-64 text-sm font-bold leading-6 text-white/85">
+                      {item.text}
+                    </p>
                   </div>
                 </article>
               ))}

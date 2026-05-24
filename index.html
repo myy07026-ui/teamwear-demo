@@ -255,37 +255,60 @@
 
       .support-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 12px;
         margin-top: 30px;
       }
 
       .support-item {
         display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 10px;
-        align-items: start;
+        grid-template-columns: 132px 1fr;
+        gap: 14px;
+        align-items: stretch;
+        overflow: hidden;
         border: 1px solid #e5e7eb;
         border-radius: 10px;
         background: #ffffff;
-        padding: 13px;
+        padding: 10px;
       }
 
-      .support-icon {
-        display: grid;
-        place-items: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 9px;
-        background: #ecfdf5;
+      .support-media {
+        position: relative;
+        overflow: hidden;
+        min-height: 92px;
+        border-radius: 8px;
+        background: #f3f4f6;
+      }
+
+      .support-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .support-label {
+        position: absolute;
+        left: 8px;
+        bottom: 8px;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.92);
+        padding: 5px 8px;
         color: #0f766e;
-        font-size: 18px;
+        font-size: 11px;
         font-weight: 900;
+      }
+
+      .support-copy {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 4px;
       }
 
       .support-item h3 {
         margin: 0 0 4px;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.35;
       }
 
@@ -638,7 +661,6 @@
         }
 
         .support-grid {
-          grid-template-columns: 1fr;
           margin-top: 24px;
         }
 
@@ -746,6 +768,15 @@
         .price {
           font-size: 16px;
         }
+
+        .support-item {
+          grid-template-columns: 1fr;
+          padding: 10px;
+        }
+
+        .support-media {
+          min-height: 128px;
+        }
       }
     </style>
   </head>
@@ -789,24 +820,33 @@
             </div>
             <div class="support-grid" aria-label="カスタム制作サポート">
               <article class="support-item">
-                <span class="support-icon" aria-hidden="true">D</span>
-                <div>
+                <div class="support-media">
+                  <img src="public/assets/logo-embroidery.jpg" alt="ロゴデザインと刺繍イメージ">
+                  <span class="support-label">Design</span>
+                </div>
+                <div class="support-copy">
                   <h3>無料デザイン相談</h3>
-                  <p>ロゴや文字入れの配置を気軽に相談できます。</p>
+                  <p>ロゴや文字入れの配置を、法人用途に合わせて整えます。</p>
                 </div>
               </article>
               <article class="support-item">
-                <span class="support-icon" aria-hidden="true">1</span>
-                <div>
+                <div class="support-media">
+                  <img src="public/assets/gray-polo-team.jpg" alt="法人ユニフォームの打ち合わせイメージ">
+                  <span class="support-label">Support</span>
+                </div>
+                <div class="support-copy">
                   <h3>専任担当が一対一で対応</h3>
-                  <p>用途・数量・納期に合わせて丁寧にサポートします。</p>
+                  <p>用途・数量・納期を確認しながら、落ち着いた対応で進行します。</p>
                 </div>
               </article>
               <article class="support-item">
-                <span class="support-icon" aria-hidden="true">技</span>
-                <div>
+                <div class="support-media">
+                  <img src="public/assets/blue-fabric-detail.jpg" alt="生地と加工方法のイメージ">
+                  <span class="support-label">Process</span>
+                </div>
+                <div class="support-copy">
                   <h3>多様な加工方法に対応</h3>
-                  <p>企業ユニフォームの定制ニーズに幅広く対応します。</p>
+                  <p>刺繍・プリントなど、企業ユニフォームの制作ニーズに対応します。</p>
                 </div>
               </article>
             </div>

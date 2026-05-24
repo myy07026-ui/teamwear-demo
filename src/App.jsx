@@ -110,7 +110,7 @@ export default function App() {
               MAMOユニフォーム
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
-              会社・学校・イベント向けのロゴ入りウェアを簡単注文
+              法人向け作業服・団体服・オリジナルウェア制作対応
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a

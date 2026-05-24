@@ -138,6 +138,38 @@ export default function App() {
                 制作の流れ
               </a>
             </div>
+            <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              {[
+                {
+                  icon: 'D',
+                  title: '無料デザイン相談',
+                  text: 'ロゴや文字入れの配置を気軽に相談できます。'
+                },
+                {
+                  icon: '1',
+                  title: '専任担当が一対一で対応',
+                  text: '用途・数量・納期に合わせて丁寧にサポートします。'
+                },
+                {
+                  icon: '技',
+                  title: '多様な加工方法に対応',
+                  text: '企業ユニフォームの定制ニーズに幅広く対応します。'
+                }
+              ].map((item) => (
+                <article
+                  key={item.title}
+                  className="grid grid-cols-[auto_1fr] gap-3 rounded-lg border border-line bg-white p-3"
+                >
+                  <span className="grid h-9 w-9 place-items-center rounded-md bg-teal-50 text-lg font-black text-brand">
+                    {item.icon}
+                  </span>
+                  <div>
+                    <h3 className="m-0 text-sm font-bold leading-snug">{item.title}</h3>
+                    <p className="m-0 mt-1 text-xs leading-5 text-gray-500">{item.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
 
           <div>

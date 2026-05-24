@@ -138,23 +138,6 @@ export default function App() {
                 制作の流れ
               </a>
             </div>
-            <div className="relative mt-8 min-h-[340px] overflow-hidden rounded-lg bg-ink text-white">
-              <img
-                src="/assets/brand-visual-support.png"
-                alt="法人向けユニフォームのブランドビジュアル"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,23,42,0.18)_0%,rgba(15,23,42,0.42)_58%,rgba(15,23,42,0.62)_100%)]" />
-              <div className="relative z-10 grid min-h-[340px] grid-cols-3">
-                {['無料デザイン相談', '一対一の専門サポート', '高品質ロゴ加工'].map((title) => (
-                  <div key={title} className="flex items-center justify-center p-4 text-center sm:p-6">
-                    <h3 className="m-0 max-w-72 text-lg font-black leading-tight text-white drop-shadow-2xl sm:text-3xl lg:text-4xl">
-                      {title}
-                    </h3>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div>

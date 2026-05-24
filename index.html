@@ -213,6 +213,39 @@
         line-height: 1.5;
       }
 
+      .hero-title-row {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        max-width: 720px;
+      }
+
+      .hero-consult-inline {
+        flex: 0 0 auto;
+        padding-bottom: 8px;
+        text-align: right;
+      }
+
+      .hero-consult-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 5px;
+        color: #06c755;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .hero-consult-text {
+        margin-bottom: 0;
+        color: #1f2933;
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
       .hero-cards {
         display: grid;
         grid-template-columns: 1fr 0.88fr;
@@ -571,6 +604,20 @@
           gap: 10px;
         }
 
+        .hero-title-row {
+          display: block;
+        }
+
+        .hero-consult-inline {
+          margin-top: 12px;
+          padding-bottom: 0;
+          text-align: left;
+        }
+
+        .hero-consult-title {
+          justify-content: flex-start;
+        }
+
         .hero-card,
         .hero-card:first-child {
           grid-row: auto;
@@ -675,7 +722,16 @@
         <div class="container hero-inner">
           <div>
             <p class="eyebrow">ロゴ入りウェアをかんたん制作</p>
-            <h1>MAMOユニフォーム</h1>
+            <div class="hero-title-row">
+              <h1>MAMOユニフォーム</h1>
+              <div class="hero-consult-inline">
+                <div class="hero-consult-title">
+                  <span class="line-icon" aria-hidden="true">LINE</span>
+                  LINE相談
+                </div>
+                <p class="hero-consult-text">カスタム相談・一対一の専門サポート</p>
+              </div>
+            </div>
             <p class="lead">
               法人向け作業服・団体服・オリジナルウェア制作対応
             </p>

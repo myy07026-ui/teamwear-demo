@@ -106,9 +106,20 @@ export default function App() {
               <Sparkles size={15} aria-hidden="true" />
               ロゴ入りウェアをかんたん制作
             </p>
-            <h1 className="text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl lg:text-5xl">
-              MAMOユニフォーム
-            </h1>
+            <div className="flex max-w-3xl flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <h1 className="text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl lg:text-5xl">
+                MAMOユニフォーム
+              </h1>
+              <div className="shrink-0 sm:pb-2 sm:text-right">
+                <div className="mb-1 flex items-center gap-2 text-sm font-black text-[#06c755] sm:justify-end">
+                  <MessageCircle size={17} aria-hidden="true" />
+                  LINE相談
+                </div>
+                <p className="m-0 text-sm font-bold text-ink">
+                  カスタム相談・一対一の専門サポート
+                </p>
+              </div>
+            </div>
             <p className="mt-4 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
               法人向け作業服・団体服・オリジナルウェア制作対応
             </p>
@@ -129,26 +140,28 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-3 sm:gap-4">
-            {heroCards.map((item, index) => (
-              <article
-                key={item.title}
-                className={`overflow-hidden rounded-lg border border-line bg-white shadow-soft ${
-                  index === 1 ? 'translate-y-6' : ''
-                }`}
-              >
-                <div className="aspect-[4/5] bg-gray-100">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="px-3 py-3 text-center text-sm font-bold sm:text-base">
-                  {item.title}
-                </div>
-              </article>
-            ))}
+          <div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              {heroCards.map((item, index) => (
+                <article
+                  key={item.title}
+                  className={`overflow-hidden rounded-lg border border-line bg-white shadow-soft ${
+                    index === 1 ? 'translate-y-6' : ''
+                  }`}
+                >
+                  <div className="aspect-[4/5] bg-gray-100">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="px-3 py-3 text-center text-sm font-bold sm:text-base">
+                    {item.title}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

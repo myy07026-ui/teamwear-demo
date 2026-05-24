@@ -107,7 +107,7 @@ export default function App() {
               ロゴ入りウェアをかんたん制作
             </p>
             <h1 className="text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl lg:text-5xl">
-              オリジナル作業服・チームウェア制作
+              MAMOユニフォーム
             </h1>
             <p className="mt-4 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
               会社・学校・イベント向けのロゴ入りウェアを簡単注文

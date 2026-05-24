@@ -508,8 +508,21 @@
       }
 
       .contact .button {
+        background: #06c755;
+        color: #ffffff;
+      }
+
+      .line-icon {
+        display: inline-grid;
+        place-items: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
         background: #ffffff;
-        color: #1f2933;
+        color: #06c755;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0;
       }
 
       .mobile-line {
@@ -742,7 +755,15 @@
               <span>ロゴ入れ対応</span>
             </div>
           </div>
-          <a class="button" href="#top">LINEで相談する</a>
+          <a
+            class="button"
+            href="https://line.me/ti/p/CkChe7q5c4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="line-icon" aria-hidden="true">LINE</span>
+            LINEで相談する
+          </a>
         </div>
       </section>
     </main>
@@ -754,7 +775,15 @@
       </div>
     </footer>
 
-    <a class="button button-brand mobile-line" href="#contact">LINE相談</a>
+    <a
+      class="button button-brand mobile-line"
+      href="https://line.me/ti/p/CkChe7q5c4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="line-icon" aria-hidden="true">LINE</span>
+      LINE相談
+    </a>
 
     <script>
       const assetBase = window.location.protocol === 'file:' ? 'public/assets' : '/assets';

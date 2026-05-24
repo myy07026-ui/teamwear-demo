@@ -251,8 +251,10 @@ export default function App() {
             </div>
           </div>
           <a
-            href="#top"
-            className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-ink transition hover:bg-gray-100 md:mt-0 md:w-auto"
+            href="https://line.me/ti/p/CkChe7q5c4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#06c755] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#05b64e] md:mt-0 md:w-auto"
           >
             <MessageCircle size={18} aria-hidden="true" />
             LINEで相談する
